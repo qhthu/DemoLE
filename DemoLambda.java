@@ -20,7 +20,7 @@ interface Summary {
     public void sum(int numA, int numB);
 }
 
-public class DemoLambda{
+public class Java8 {
 
     public static void main(String[] args) {
 
@@ -28,12 +28,17 @@ public class DemoLambda{
             System.out.println("Quach Hong Thu!");
         };
 
-        Summary s = (int numA, int numB) -> {
+        Summary s = (numA, numB) -> {
             System.out.println(numA + numB);
         };
-
         s.sum(100, 28);
         d.show();
+
+        Runnable r = () -> System.out.println("Quach Hong Thu!!");
+        Thread t = new Thread(r);
+        t.start();
+
+        new Thread(() -> System.out.println("Quach Hong Thu!!!")).start();
     }
 
 }
