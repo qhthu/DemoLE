@@ -20,7 +20,7 @@ interface Summary {
     public void sum(int numA, int numB);
 }
 
-public class Java8 {
+public class DemoLambda {
 
     public static void main(String[] args) {
 
